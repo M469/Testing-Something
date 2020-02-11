@@ -7,7 +7,7 @@ var version = "1.0";
 
 function checkUpdate() {
 request('https://raw.githubusercontent.com/M469/Testing-Something/master/version', function(error, response, body) {
-    if(body > version) {
+    if(!body === version) {
         var YesNo = readline.keyInYN("there is new update release do you want to download it ?");
         if(YesNo === false) return;
         if(YesNo === true) {
